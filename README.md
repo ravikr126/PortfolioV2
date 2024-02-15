@@ -1,8 +1,8 @@
-# React + Vite
+# NEW SKILL unlocked!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React Flow project to tell my story in the form of a skilltree.
+Optimized for Dektop and mobile!
+[Check it out here!](https://kaleidoscopic-arithmetic-3b682b.netlify.app/)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![InesHilz_skilltree](https://github.com/Inesseni/Skilltree_ReactFlow/assets/60435099/aaa5d8b1-a69b-4ad5-9947-38329c4551cc)

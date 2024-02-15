@@ -1,42 +1,81 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.react-flow__edge,
+.react-flow__edge-path {
+  pointer-events: none;
+  stroke-width: 2;
+  stroke: rgb(255, 255, 255);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.react-flow__node {
+  border: 0px solid rgb(255, 255, 255);
+  background-color: rgb(85, 85, 85);
+  color: white;
+  cursor: default;
+  width: 80px;
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 8px 5px 2px 1px rgba(0, 0, 255, 0.2);
+  cursor: pointer;
 }
 
-@keyframes logo-spin {
+.react-flow__node.selected {
+  background-color: white;
+  border: 0px solid black;
+  color: rgba(85, 85, 85, 1);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 255, 0);
+}
+
+.react-flow__node.loading {
+  background: linear-gradient(
+    to left,
+    rgba(85, 85, 85, 1) 0px,
+    rgba(85, 85, 85, 0.5) 50px
+  );
+  background-size: 100px 30px;
+  animation: animate-stripes 3s linear infinite;
+}
+
+.react-flow__node.loading.selected {
+  background: linear-gradient(
+    to left,
+    rgb(243, 243, 243) 0px,
+    rgba(255, 255, 255, 0.5) 100px
+  );
+  color: rgba(85, 85, 85, 1);
+  background-size: 100px 30px;
+}
+
+.react-flow__node.first {
+  border-radius: 40px;
+  padding: 20px;
+  width: 120px;
+  font-size: medium;
+  opacity: 1;
+}
+
+.react-flow__node.first:hover {
+  background-color: white;
+  color: rgba(85, 85, 85, 1);
+}
+
+@keyframes animate-stripes {
   from {
-    transform: rotate(0deg);
+    background-position: 0 0;
   }
+
   to {
-    transform: rotate(360deg);
+    background-position: 100px 0;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.react-flow__node:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(49, 49, 49);
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.react-flow__handle {
+  opacity: 0;
+  cursor: default !important;
 }
